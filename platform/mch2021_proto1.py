@@ -19,7 +19,11 @@ class MCH2021BadgePrototype1(LatticeICE40Platform):
 
     # For now, use the iCE40's internal oscillator as our default, as it's
     # there no matter what firmware's running on the ESP32.
+    #
+    # We'll start off with this undivided, at 48MHz.
+    #
     default_clk = "SB_HFOSC"
+    hfosc_div   = 0
 
     resources = [
 
